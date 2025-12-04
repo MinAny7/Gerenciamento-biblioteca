@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema Biblioteca Online</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Sistema Biblioteca Online</h1>
+    <div id="user-area"></div>
+  </header>
+
+  <main>
+    <!-- Painel de login -->
+    <section class="panel" id="login-panel">
+      <h2>Login do Administrador</h2>
+      <form id="login-form">
+        <input type="text" id="login-name" placeholder="Nome" required />
+        <input type="password" id="login-pass" placeholder="Senha" required />
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+      <p>Ainda não possui conta?</p>
+      <button id="btn-show-register">Cadastrar Administrador</button>
+    </section>
+
+    <!-- Painel de cadastro -->
+    <section class="panel" id="register-panel" hidden>
+      <h2>Cadastrar Administrador</h2>
+      <form id="register-form">
+        <input type="text" id="reg-name" placeholder="Nome" required />
+        <input type="email" id="reg-email" placeholder="E-mail" required />
+        <input type="password" id="reg-pass" placeholder="Senha" required />
+        <button type="submit" class="btn-primary">Cadastrar</button>
+      </form>
+      <button id="btn-back-login">Voltar ao Login</button>
+    </section>
+
+    <!-- Painel principal -->
+    <section class="panel" id="main-panel" hidden>
+      <div class="controls">
+          <button id="btn-show-books">Livros</button>
+          <button id="btn-show-users">Usuários</button>
+          <button id="btn-show-loans">Livros Emprestados</button>
+          <button id="btn-logout">Logout</button>
+        </div>
+
+      <div id="content"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Protótipo acadêmico — persistência local (localStorage)</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
